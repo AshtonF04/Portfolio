@@ -12,12 +12,18 @@ export default function Nav_Bar(){
       });
 
     return(
-        <div class={`px-8 xl:px-24 hidden lg:block w-screen h-10 fixed ${active ? 'visible' : 'invisible'}`}>
-            <div className="flex flex-row items-center gap-4 p-8 text-md text-white h-full bg-slate-900">
-                <a rel="noopener" href="#About" class="font-bold transition ease-in-out hover:text-slate-400 underline-effect">Ashton Franklin</a>
-                <a rel="noopener" href="#About" class="transition ease-in-out hover:text-slate-400 underline-effect">About</a>
-                <a rel="noopener" href="#About" class="transition ease-in-out hover:text-slate-400 underline-effect">Experience</a>
-                <a rel="noopener" href="#About" class="transition ease-in-out hover:text-slate-400 underline-effect">Projects</a>
+        <div className={`px-8 flex items-center bg-slate-900 justify-between xl:px-24 hidden lg:flex w-screen h-12 fixed ${active ? 'visible' : 'invisible'}`}>
+            <div className="flex flex-row items-center gap-4 p-8 text-md text-white h-full ">
+                <button onClick={() => window.scrollTo({top:0, behavior: 'smooth'})} className="font-bold">Ashton Franklin</button>
+                <button onClick={() => window.scrollTo({top:850, behavior: 'smooth'})} className="">about me</button>
+                <button onClick={() => window.scrollTo({top:1500, behavior: 'smooth'})} className="">experience</button>
+                <button onClick={() => window.scrollTo({top:1500, behavior: 'smooth'})} className="">projects</button>
+            </div>
+
+            <div className="flex gap-8">
+                <a href="mailto: ashtonfranklin772@gmail.com"><img src={require('../email-icon.png')}/></a>
+                <a href="https://www.linkedin.com/in/ashton-franklin-5a6345288/"><img src={require('../linkedin-icon.png')}/></a>
+                <a target="_blank" href="https://github.com/AshtonF04"><img src={require('../github-icon.png')}/></a>
             </div>
             
         </div>
