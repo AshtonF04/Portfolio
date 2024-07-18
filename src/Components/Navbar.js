@@ -12,8 +12,8 @@ export default function Nav_Bar(){
       });
 
     return(
-        <div className={`px-8 flex items-center bg-slate-900 justify-between xl:px-24 hidden lg:flex w-screen h-12 fixed ${active ? 'visible' : 'invisible'}`}>
-            <div className="flex flex-row items-center gap-4 p-8 text-md text-white h-full ">
+        <div className={`px-8 flex py-4 items-center bg-slate-900 justify-between xl:px-24 lg:flex w-screen h-12 fixed ${active ? 'visible' : 'invisible'}`}>
+            <div className="hidden xl:flex flex-row items-center gap-4 p-8 text-md text-white h-full ">
                 <button onClick={() => window.scrollTo({top:0, behavior: 'smooth'})} className="font-bold">Ashton Franklin</button>
                 <button onClick={() => window.scrollTo({top:850, behavior: 'smooth'})} className="">about me</button>
                 <button onClick={() => window.scrollTo({top:1500, behavior: 'smooth'})} className="">experience</button>
